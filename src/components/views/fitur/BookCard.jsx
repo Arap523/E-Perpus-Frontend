@@ -26,7 +26,7 @@ function BookCard({ buku, kategoriList }) {
       cleanPath = `uploads/${cleanPath}`
     }
 
-    return `http://103.175.218.4/${cleanPath}`
+    return `https://apiprawira.my.id/${cleanPath}`
   }
 
   return (

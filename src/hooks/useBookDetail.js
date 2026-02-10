@@ -5,7 +5,7 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { validateBookingTime } from '../components/utils/bookingValidation' // Pastikan path benar
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://103.175.218.4'
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://apiprawira.my.id'
 
 export const useBookDetail = () => {
   const { id } = useParams()

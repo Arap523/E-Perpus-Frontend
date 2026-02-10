@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://103.175.218.4',
+  baseURL: import.meta.env.VITE_API_URL || 'https://apiprawira.my.id',
 })
 
 // ⏩ Request interceptor ➜ pasang token

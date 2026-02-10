@@ -35,7 +35,7 @@ export const useFormEditBuku = () => {
     let cleanPath = path.replace(/\\/g, '/').replace('public/', '')
     if (cleanPath.startsWith('/')) cleanPath = cleanPath.substring(1)
     if (!cleanPath.startsWith('uploads/')) cleanPath = `uploads/${cleanPath}`
-    return `http://103.175.218.4/${cleanPath}`
+    return `https://apiprawira.my.id/${cleanPath}`
   }
 
   // --- 2. FETCH DATA (UPDATE: Ambil Harga dari DB) ---

@@ -14,7 +14,7 @@ const useDataMurid = () => {
   const fetchMurid = async () => {
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.get('http://103.175.218.4/api/murid', {
+      const res = await axios.get('https://apiprawira.my.id/api/murid', {
         headers: { Authorization: `Bearer ${token}` },
       })
       const dataFinal = Array.isArray(res.data) ? res.data : res.data.data || []
@@ -46,7 +46,7 @@ const useDataMurid = () => {
 
     try {
       const token = localStorage.getItem('token')
-      await axios.delete(`http://103.175.218.4/api/murid/${id}`, {
+      await axios.delete(`https://apiprawira.my.id/api/murid/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       await fetchMurid()

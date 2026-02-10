@@ -8,7 +8,7 @@ const MuridTableRow = ({ murid, onEdit, onDelete, onDetail }) => {
         <div className="flex justify-center items-center">
           {murid.profile_picture ? (
             <img
-              src={`http://103.175.218.4/${murid.profile_picture}`}
+              src={`https://apiprawira.my.id/${murid.profile_picture}`}
               alt={murid.namaLengkap}
               // Mobile: w-8 h-8 (32px), Desktop: w-10 h-10 (40px)
               className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover border border-gray-300 shadow-sm"

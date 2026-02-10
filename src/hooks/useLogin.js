@@ -62,7 +62,7 @@ export const useLogin = () => {
 
     try {
       setLoading(true)
-      const res = await axios.post('http://103.175.218.4/api/auth/login', {
+      const res = await axios.post('https://apiprawira.my.id/api/auth/login', {
         email,
         password,
       })

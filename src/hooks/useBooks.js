@@ -17,8 +17,8 @@ export const useBooks = () => {
       }
 
       const [bukuRes, kategoriRes] = await Promise.all([
-        axios.get('http://103.175.218.4/api/buku'),
-        axios.get('http://103.175.218.4/api/kategori'),
+        axios.get('https://apiprawira.my.id/api/buku'),
+        axios.get('https://apiprawira.my.id/api/kategori'),
       ])
 
       const finalBuku = Array.isArray(bukuRes.data)
@@ -44,7 +44,7 @@ export const useBooks = () => {
   useEffect(() => {
     fetchData()
 
-    const socket = io('http://103.175.218.4')
+    const socket = io('https://apiprawira.my.id')
 
     socket.on('change_data', (data) => {
       console.log('Realtime update:', data)

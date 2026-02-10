@@ -32,7 +32,7 @@ function EditMurid() {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token')
-        const res = await axios.get(`http://103.175.218.4/api/murid/${id}`, {
+        const res = await axios.get(`https://apiprawira.my.id/api/murid/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
 
@@ -77,7 +77,7 @@ function EditMurid() {
 
     try {
       const token = localStorage.getItem('token')
-      await axios.put(`http://103.175.218.4/api/murid/${id}`, data, {
+      await axios.put(`https://apiprawira.my.id/api/murid/${id}`, data, {
         headers: { Authorization: `Bearer ${token}` },
       })
       Swal.fire('Berhasil!', 'Data murid berhasil diperbarui.', 'success')

@@ -26,7 +26,7 @@ const useDataLaporan = () => {
     try {
       setLoading(true)
       const token = localStorage.getItem('token')
-      const res = await axios.get('http://103.175.218.4/api/laporan', {
+      const res = await axios.get('https://apiprawira.my.id/api/laporan', {
         headers: { Authorization: `Bearer ${token}` },
       })
       if (res.data && res.data.data) {

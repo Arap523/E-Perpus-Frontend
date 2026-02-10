@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import api from '../components/utils/api' // Sesuaikan path api lu
 import Swal from 'sweetalert2'
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://103.175.218.4'
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://apiprawira.my.id'
 
 export const useProfile = () => {
   const navigate = useNavigate()

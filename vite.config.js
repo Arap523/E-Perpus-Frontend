@@ -71,7 +71,7 @@ export default defineConfig({
   // ------------------------------
   server: {
     proxy: {
-      '/api': 'http://103.175.218.4',
+      '/api': 'https://apiprawira.my.id/',
     },
   },
   resolve: {

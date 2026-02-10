@@ -29,7 +29,7 @@ const MuridDetailModal = ({ isOpen, onClose, murid }) => {
                 <img
                   src={
                     murid.profile_picture
-                      ? `http://103.175.218.4/${murid.profile_picture}`
+                      ? `https://apiprawira.my.id/${murid.profile_picture}`
                       : 'https://via.placeholder.com/150?text=No+Img'
                   }
                   alt={murid.namaLengkap}

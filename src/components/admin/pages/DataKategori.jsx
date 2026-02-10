@@ -21,7 +21,7 @@ function DataKategori() {
   const fetchKategori = async () => {
     setLoading(true)
     try {
-      const res = await axios.get('http://103.175.218.4/api/kategori')
+      const res = await axios.get('https://apiprawira.my.id/api/kategori')
       const dataFinal = Array.isArray(res.data) ? res.data : res.data.data || []
       setKategoriList(dataFinal)
     } catch (err) {
@@ -51,7 +51,7 @@ function DataKategori() {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://103.175.218.4/api/kategori/${id}`, {
+        await axios.delete(`https://apiprawira.my.id/api/kategori/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
 

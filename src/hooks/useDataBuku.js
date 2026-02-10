@@ -21,7 +21,7 @@ export const useDataBuku = (itemsPerPage = 10) => {
     const fetchBuku = async () => {
       setLoading(true)
       try {
-        const res = await fetch('http://103.175.218.4/api/buku', {
+        const res = await fetch('https://apiprawira.my.id/api/buku', {
           headers: { Authorization: `Bearer ${token}` },
         })
         if (!res.ok) throw new Error('Gagal mengambil data buku.')
@@ -57,7 +57,7 @@ export const useDataBuku = (itemsPerPage = 10) => {
 
     if (result.isConfirmed) {
       try {
-        const res = await fetch(`http://103.175.218.4/api/buku/${id}`, {
+        const res = await fetch(`https://apiprawira.my.id/api/buku/${id}`, {
           method: 'DELETE',
           headers: { Authorization: `Bearer ${token}` },
         })

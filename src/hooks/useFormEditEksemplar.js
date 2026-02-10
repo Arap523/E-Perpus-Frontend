@@ -15,7 +15,7 @@ export const useFormEditEksemplar = () => {
   const [submitting, setSubmitting] = useState(false)
 
   // Pastikan URL ini sesuai dengan Backend
-  const EKSEMPLAR_API = `http://103.175.218.4/api/eksemplar/${eksemplarId}`
+  const EKSEMPLAR_API = `https://apiprawira.my.id/api/eksemplar/${eksemplarId}`
 
   // 1. FETCH DETAIL
   useEffect(() => {

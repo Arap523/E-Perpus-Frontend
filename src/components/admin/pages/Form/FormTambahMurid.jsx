@@ -41,7 +41,7 @@ function FormTambahMurid() {
     try {
       const token = localStorage.getItem('token')
 
-      await axios.post('http://103.175.218.4/api/murid', data, {
+      await axios.post('https://apiprawira.my.id/api/murid', data, {
         headers: { Authorization: `Bearer ${token}` },
       })
 

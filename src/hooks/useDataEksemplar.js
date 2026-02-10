@@ -18,7 +18,7 @@ export const useDataEksemplar = (itemsPerPage = 10) => {
     const fetchEksemplar = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('http://103.175.218.4/api/eksemplar', {
+        const res = await axios.get('https://apiprawira.my.id/api/eksemplar', {
           headers: { Authorization: `Bearer ${token}` },
         })
         const dataFinal = Array.isArray(res.data)
@@ -50,7 +50,7 @@ export const useDataEksemplar = (itemsPerPage = 10) => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://103.175.218.4/api/eksemplar/${id}`, {
+        await axios.delete(`https://apiprawira.my.id/api/eksemplar/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         Swal.fire('Berhasil!', 'Eksemplar dihapus.', 'success')

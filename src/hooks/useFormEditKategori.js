@@ -17,7 +17,7 @@ export const useFormEditKategori = () => {
     const fetchAndFindKategori = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('http://103.175.218.4/api/kategori')
+        const res = await axios.get('https://apiprawira.my.id/api/kategori')
         const rawData = res.data.data || res.data
         const dataArray = Array.isArray(rawData) ? rawData : []
         const found = dataArray.find((k) => k.id == id)
@@ -48,7 +48,7 @@ export const useFormEditKategori = () => {
 
     try {
       await axios.put(
-        `http://103.175.218.4/api/kategori/${id}`,
+        `https://apiprawira.my.id/api/kategori/${id}`,
         { nama_kategori: namaKategori },
         { headers: { Authorization: `Bearer ${token}` } }
       )

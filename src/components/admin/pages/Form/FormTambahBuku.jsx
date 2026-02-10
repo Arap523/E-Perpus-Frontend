@@ -81,7 +81,7 @@ function FormTambahBuku() {
     const fetchKategori = async () => {
       try {
         const token = localStorage.getItem('token')
-        const res = await fetch('http://103.175.218.4/api/kategori', {
+        const res = await fetch('https://apiprawira.my.id/api/kategori', {
           headers: { Authorization: `Bearer ${token}` },
         })
         const result = await res.json()
@@ -154,7 +154,7 @@ function FormTambahBuku() {
     })
 
     try {
-      const res = await fetch('http://103.175.218.4/api/buku', {
+      const res = await fetch('https://apiprawira.my.id/api/buku', {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` },
         body: payload,

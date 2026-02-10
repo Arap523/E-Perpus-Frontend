@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 import { io } from 'socket.io-client'
 
 // Ganti URL sesuai port backend lu
-const SOCKET_URL = 'http://103.175.218.4'
+const SOCKET_URL = 'https://apiprawira.my.id'
 const ITEMS_PER_PAGE = 10
 
 export const useDataPeminjaman = () => {
@@ -30,7 +30,7 @@ export const useDataPeminjaman = () => {
 
     try {
       const token = localStorage.getItem('token')
-      const res = await fetch('http://103.175.218.4/api/peminjaman', {
+      const res = await fetch('https://apiprawira.my.id/api/peminjaman', {
         headers: token ? { Authorization: `Bearer ${token}` } : {},
       })
 
@@ -93,7 +93,7 @@ export const useDataPeminjaman = () => {
 
     try {
       Swal.showLoading()
-      const res = await fetch(`http://103.175.218.4/api/peminjaman/${id}`, {
+      const res = await fetch(`https://apiprawira.my.id/api/peminjaman/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       })

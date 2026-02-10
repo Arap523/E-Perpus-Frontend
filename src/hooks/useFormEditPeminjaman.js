@@ -37,7 +37,7 @@ export const useFormEditPeminjaman = () => {
     const fetchDetail = async () => {
       setLoading(true)
       try {
-        const res = await fetch(`http://103.175.218.4/api/peminjaman`, {
+        const res = await fetch(`https://apiprawira.my.id/api/peminjaman`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {},
         })
         if (!res.ok) throw new Error('Data peminjaman tidak ditemukan.')
@@ -134,7 +134,7 @@ export const useFormEditPeminjaman = () => {
           formData.tanggal_actual === '' ? null : formData.tanggal_actual,
       }
 
-      const res = await fetch(`http://103.175.218.4/api/peminjaman/${id}`, {
+      const res = await fetch(`https://apiprawira.my.id/api/peminjaman/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

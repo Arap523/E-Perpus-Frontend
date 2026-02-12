@@ -22,6 +22,24 @@ export default defineConfig({
               },
             },
           },
+          {
+            urlPattern: ({ url }) =>
+              url.pathname.startsWith('/uploads') ||
+              url.href.includes('apiprawira.my.id/uploads'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'book-covers-cache',
+              expiration: {
+                maxEntries: 200, // Simpan max 200 gambar
+                maxAgeSeconds: 60 * 60 * 24 * 30, // Simpan 30 Hari
+              },
+              cacheableResponse: {
+                // PENTING: Status 0 (Opaque) WAJIB ada buat gambar beda domain (CORS)
+                // Tanpa ini, gambar dari apiprawira.my.id GAK BAKAL disimpan.
+                statuses: [0, 200],
+              },
+            },
+          },
         ],
       },
       includeAssets: [

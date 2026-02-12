@@ -32,9 +32,12 @@ function EditMurid() {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token')
-        const res = await axios.get(`https://apiprawira.my.id/api/murid/${id}`, {
-          headers: { Authorization: `Bearer ${token}` },
-        })
+        const res = await axios.get(
+          `https://apiprawira.my.id/api/murid/${id}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        )
 
         if (res.data?.data) {
           const data = res.data.data

@@ -12,9 +12,12 @@ export const useRiwayatPeminjaman = (itemsPerPage = 10) => {
   const fetchRiwayat = useCallback(async () => {
     try {
       const token = localStorage.getItem('token')
-      const res = await fetch('https://apiprawira.my.id/api/peminjaman/riwayat', {
-        headers: token ? { Authorization: `Bearer ${token}` } : {},
-      })
+      const res = await fetch(
+        'https://apiprawira.my.id/api/peminjaman/riwayat',
+        {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        }
+      )
       if (!res.ok) throw new Error('Gagal mengambil data')
       const json = await res.json()
       setRiwayat(json.data || [])
